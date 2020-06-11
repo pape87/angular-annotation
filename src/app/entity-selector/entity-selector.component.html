@@ -1,1 +1,8 @@
-<p>entity-selector works!</p>
+<div class="entity-selector container">
+  <div>
+    <button *ngFor="let entity of entities" [ngClass]="{
+        'entity-selector__button': true, 
+        'entity-selector__button-selected': entity === selectedEntity
+      }" (click)="selectionChanged(entity)">{{entity}}</button>
+  </div>
+</div>

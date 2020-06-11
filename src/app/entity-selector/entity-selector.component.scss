@@ -1,0 +1,22 @@
+@import "_colors";
+
+.entity-selector {
+  background-color: $violet;
+  display: flex;
+  padding: 0 0 10px 0;
+
+  &__button {
+    margin: 10px 0 0 10px;
+    color: $white;
+    border-width: 3px;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 2px solid $white;
+
+    &-selected {
+      background-color: $white;
+      color: $violet;
+    }
+
+  }
+}

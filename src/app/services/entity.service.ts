@@ -1,4 +1,6 @@
 import { Injectable } from "@angular/core";
+import { Observable, of } from "rxjs";
+import { delay } from "rxjs/operators";
 
 export type Entity = "ORG" | "PRODUCT" | "DATE" | "GPE" | "EVENT" | "TIME" | "LOC" | "PERSON";
 
@@ -9,7 +11,7 @@ export class EntityService {
 
   constructor() { }
 
-  public GetEntities(): Promise<Entity[]> {
-    return new Promise(() => ["ORG", "PRODUCT", "DATE", "GPE", "EVENT", "TIME", "LOC", "PERSON"]);
+  public GetEntities(): Observable<Entity[]> {
+    return of(["ORG", "PRODUCT", "DATE", "GPE", "EVENT", "TIME", "LOC", "PERSON"] as Entity[]).pipe(delay(10));
   }
 }

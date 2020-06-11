@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 
+import { EntityService, Entity } from "../services/entity.service";
+
 @Component({
   selector: "app-entity-selector",
   templateUrl: "./entity-selector.component.html",
@@ -7,9 +9,19 @@ import { Component, OnInit } from "@angular/core";
 })
 export class EntitySelectorComponent implements OnInit {
 
-  constructor() { }
+  public entities: Entity[] = [];
+  public selectedEntity: Entity;
 
-  ngOnInit(): void {
+  constructor(private entityService: EntityService) {
   }
 
+  ngOnInit(): void {
+    this.entityService.GetEntities().subscribe((value) => {
+      this.entities = value;
+    });
+  }
+
+  public selectionChanged(entity: Entity){
+    this.selectedEntity = entity;
+  }
 }
