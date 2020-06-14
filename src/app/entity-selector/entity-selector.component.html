@@ -1,8 +1,8 @@
 <div class="entity-selector container">
   <div>
-    <button *ngFor="let entity of entities" [ngClass]="{
+    <button *ngFor="let entity of entities | async" [ngClass]="{
         'entity-selector__button': true, 
-        'entity-selector__button-selected': entity === selectedEntity
+        'entity-selector__button-selected': entity === (selectedEntity | async)
       }" (click)="selectionChanged(entity)">{{entity}}</button>
   </div>
 </div>
