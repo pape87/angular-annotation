@@ -1,0 +1,11 @@
+.text-annotation {
+  &__text {
+    font-size: 18px;
+
+  }
+
+  &__highlight {
+    background-color: yellow;
+    font-size: 30px;
+  }
+}

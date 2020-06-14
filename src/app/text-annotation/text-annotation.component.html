@@ -1,0 +1,9 @@
+<div class="container text-annotation">
+  <p id="text-container" class="text-annotation__text"
+    [innerHTML]="textDocuments[currentTextIndex].text | highlight:{ annotations: textDocuments[currentTextIndex].annotations, type:selectedEntity}"
+    (mouseup)="addAnnotation()">
+  </p>
+</div>
+<div clas="container">
+  <button (click)="nextText()"></button>
+</div>
