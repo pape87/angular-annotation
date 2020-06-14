@@ -10,13 +10,15 @@ import { TextAnnotationComponent } from "./text-annotation/text-annotation.compo
 import { HighlightRangePipe } from "./pipes/highlight-range.pipe";
 import { rootReducer } from "./store/reducers/root.reducer";
 import { env } from "process";
+import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EntitySelectorComponent,
     TextAnnotationComponent,
-    HighlightRangePipe
+    HighlightRangePipe,
+    NavigationBarComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,33 @@
+@import "_colors";
+
+.navigation-bar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  &__center {
+    display: flex;
+    margin: auto;
+    width: 50%;
+  }
+  
+  &__button {
+    height: 200px;
+    width: 200px;
+    bottom: 0;
+    margin: 5px;
+    text-align: center;
+
+    &-save {
+      background-color: $green;      
+    }
+
+    &-skip{
+      background-color: $grey;
+    }
+
+    &-next{
+      background-color: $grey;
+    }
+  }
+}
