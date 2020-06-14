@@ -1,11 +1,22 @@
+@import "_colors";
+
 .text-annotation {
+  min-height: 300px;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 1px 1px $grey;
+  border-color: $grey;
+
   &__text {
     font-size: 18px;
-
   }
 
-  &__highlight {
-    background-color: yellow;
-    font-size: 30px;
+  &__source {
+    position:absolute;
+    bottom:0;
+    right:0;
+    background-color: $grey;
+    padding: 3px 10px;
+    font-size: 12px;
   }
 }

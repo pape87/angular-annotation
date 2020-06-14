@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { Store } from "@ngrx/store";
-import { Observable } from "rxjs";
 
 import rangy from "rangy/lib/rangy-core.js";
 import "rangy/lib/rangy-highlighter";
@@ -70,9 +69,5 @@ export class TextAnnotationComponent implements OnInit {
       id: this.selectedTextDocument.doc_id
     }));
     this.store.dispatch(setSelectedTextDocument({ id: this.selectedTextDocument.doc_id }));
-  }
-
-  public nextText() {
-    this.currentTextIndex = this.currentTextIndex ? 0 : 1;
   }
 }
