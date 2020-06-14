@@ -3,5 +3,5 @@
     [innerHTML]="selectedTextDocument | highlight"
     (mouseup)="addAnnotation()">
   </p>
-  <div class="text-annotation__source"><b>SOURCE: </b>{{selectedTextDocument.source}}</div>
+  <div class="text-annotation__source"><b>SOURCE: </b>{{selectedTextDocument?.source}}</div>
 </div>
