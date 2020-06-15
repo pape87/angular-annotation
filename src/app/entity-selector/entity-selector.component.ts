@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 
-import { EntityService, Entity } from "../services/entity.service";
+import { EntityService } from "../services/entity.service";
 import { Store } from "@ngrx/store";
 import { Observable } from "rxjs";
 
@@ -33,7 +33,7 @@ export class EntitySelectorComponent implements OnInit {
     this.selectedEntity = this.store.select((state) => state.entityState.selectedEntity);
   }
 
-  public selectionChanged(entity: Entity) {
+  public selectionChanged(entity: string) {
     this.store.dispatch(setSelectedEntity({ entity }));
   }
 }
